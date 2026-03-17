@@ -12,18 +12,6 @@ import java.time.LocalDate;
 
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table
-        (
-                name = "Product_table",
-                uniqueConstraints = {
-                        @UniqueConstraint(name = "sku_unique",columnNames = "sku"),
-                        @UniqueConstraint(name = "title_price_unique", columnNames = {"product_title","price"})
-                },
-                indexes = {
-                        @Index(name = "sku_index", columnList = "sku")
-
-                }
-        )
 @Data
 public class Product {
     @Id
